@@ -6,22 +6,22 @@ import ShopSection from './Components/ShopSection';
 
 export default function Shop() {
   const products = [
-    { id: 1, image: '/shopsofa1.png', title: 'Trenton modular sofa, 1 seater', price: 'Rs. 25,000.00', slug:'Product1' },
-    { id: 2, image: '/shopchairset1.png', title: 'Table Chair Set, 6+1 set', price: 'Rs. 45,000.00', slug:'Product2' },
-    { id: 3, image: '/shopchairset2.png', title: 'Table Stool Set, 6+1 set', price: 'Rs. 40,000.00', slug:'Product3' },
-    { id: 4, image: '/shopmirror.png', title: 'Plain console with teak mirror', price: 'Rs. 20,000.00', slug:'Product4' },
-    { id: 5, image: '/shoptable1.png', title: 'Plain Table 1', price: 'Rs. 15,000.00', slug:'Product5' },
-    { id: 6, image: '/shoptable2.png', title: 'Square Table 2', price: 'Rs. 20,000.00', slug:'Product6' },
-    { id: 7, image: '/shoptable3.png', title: 'Round Table 3', price: 'Rs. 30,000.00', slug:'Product7' },
-    { id: 8, image: '/shoptable4.png', title: 'Table with 2 draws', price: 'Rs. 45,000.00', slug:'Product8' },
-    { id: 9, image: '/shoptable5.png', title: 'Table with designed legs', price: 'Rs. 35,000.00', slug:'Product9' },
-    { id: 10, image: '/shopcloset1.png', title: 'Cuboard with door and art work', price: 'Rs. 45,000.00', slug:'Product10' },
-    { id: 11, image: '/shopchairset3.png', title: 'Table with 4 Chairs, 4 + 1 set', price: 'Rs. 35,000.00', slug:'Product11' },
-    { id: 12, image: '/shopchairset4.png', title: 'Table with 2 Chairs, 2 + 1 set', price: 'Rs. 25,000.00', slug:'Product12' },
-    { id: 13, image: '/shoptable6.png', title: 'Table with long leg 6', price: 'Rs. 25,000.00', slug:'Product13' },
-    { id: 14, image: '/shopsofa2.png', title: 'Trenton modular sofa, 5 seater', price: 'Rs. 65,000.00', slug:'Product14' },
-    { id: 15, image: '/shopsofa3.png', title: 'Trenton modular sofa, 3 seater', price: 'Rs. 35,000.00', slug:'Product15' },
-    { id: 16, image: '/shopsofa4.png', title: 'Trenton modular sofa, 5 seater', price: 'Rs. 55,000.00', slug:'Product16' },
+    { id: 1, image: '/shopsofa1.png', title: 'Trenton modular sofa, 1 seater', price: '25000', slug:'Product1' },
+    { id: 2, image: '/shopchairset1.png', title: 'Table Chair Set, 6+1 set', price: '45,000', slug:'Product2' },
+    { id: 3, image: '/shopchairset2.png', title: 'Table Stool Set, 6+1 set', price: '40000', slug:'Product3' },
+    { id: 4, image: '/shopmirror.png', title: 'Plain console with teak mirror', price: '20000', slug:'Product4' },
+    { id: 5, image: '/shoptable1.png', title: 'Plain Table 1', price: '15000', slug:'Product5' },
+    { id: 6, image: '/shoptable2.png', title: 'Square Table 2', price: '20000', slug:'Product6' },
+    { id: 7, image: '/shoptable3.png', title: 'Round Table 3', price: '30000', slug:'Product7' },
+    { id: 8, image: '/shoptable4.png', title: 'Table with 2 draws', price: '45000', slug:'Product8' },
+    { id: 9, image: '/shoptable5.png', title: 'Table with designed legs', price: '35000', slug:'Product9' },
+    { id: 10, image: '/shopcloset1.png', title: 'Cuboard with door and art work', price: '45000', slug:'Product10' },
+    { id: 11, image: '/shopchairset3.png', title: 'Table with 4 Chairs, 4 + 1 set', price: '35000', slug:'Product11' },
+    { id: 12, image: '/shopchairset4.png', title: 'Table with 2 Chairs, 2 + 1 set', price: '25000', slug:'Product12' },
+    { id: 13, image: '/shoptable6.png', title: 'Table with long leg 6', price: '25000', slug:'Product13' },
+    { id: 14, image: '/shopsofa2.png', title: 'Trenton modular sofa, 5 seater', price: '65000', slug:'Product14' },
+    { id: 15, image: '/shopsofa3.png', title: 'Trenton modular sofa, 3 seater', price: '35000', slug:'Product15' },
+    { id: 16, image: '/shopsofa4.png', title: 'Trenton modular sofa, 5 seater', price: '55000', slug:'Product16' },
   ];
 
   return (

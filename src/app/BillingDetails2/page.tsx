@@ -42,8 +42,9 @@ function CheckoutForm() {
 
     <div>
       <Header1 />
-    <div className="bg-white p-6 w-full">
 
+      
+    <div className="bg-white p-6 w-full">
       <div className="w-full">
         <h2 className="text-3xl font-bold mb-4 text-black hover:text-red-500 hover:scale-y-150">
           Billing Details
@@ -214,6 +215,8 @@ function CheckoutForm() {
       </div>
       
     </div>
+
+
     </div>
   );
 }

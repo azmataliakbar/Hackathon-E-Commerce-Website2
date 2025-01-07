@@ -1,30 +1,19 @@
+// src/app/shop/[slug]/page.tsx
+
 'use client';
 
 import { notFound, useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 import Header1 from '../../components/Header1';
 import Last from '../../components/Footer';
 import { useCart } from '../../context/CartContext';
 
-type Product = {
-  id: number;
-  image: string;
-  title: string;
-  price: string;
-  slug: string;
-};
 
-type PageProps = {
-  params: Promise<{ slug: string }>;
-};
-
-export default function ProductPage({ params }: PageProps) {
+export default function ProductPage({ params }: { params: { slug: string } }) {
   const { addToCart } = useCart();
   const router = useRouter();
-  const [product, setProduct] = useState<Product | null>(null);
 
-  const products: Product[] = [
+  const products = [
     { id: 1, image: '/shopsofa1.png', title: 'Trenton modular sofa, 1 seater', price: '25000', slug:'Product1' },
     { id: 2, image: '/shopchairset1.png', title: 'Table Chair Set, 6+1 set', price: '45000', slug:'Product2' },
     { id: 3, image: '/shopchairset2.png', title: 'Table Stool Set, 6+1 set', price: '40000', slug:'Product3' },
@@ -43,38 +32,22 @@ export default function ProductPage({ params }: PageProps) {
     { id: 16, image: '/shopsofa4.png', title: 'Trenton modular sofa, 5 seater', price: '55000', slug:'Product16' },
   ];
 
-  useEffect(() => {
-    const loadProduct = async () => {
-      const { slug } = await params;
-      const foundProduct = products.find((p) => p.slug === slug);
-      if (foundProduct) {
-        setProduct(foundProduct);
-      } else {
-        notFound();
-      }
-    };
-
-    loadProduct();
-// eslint-disable-next-line react-hooks/exhaustive-deps
-}, [params]);
+  const product = products.find((p) => p.slug === params.slug);
+  if (!product) {
+    notFound();
+  }
 
   const handleAddToCart = () => {
-    if (product) {
-      addToCart({
-        id: product.id,
-        name: product.title,
-        price: Number(product.price),
-        image: product.image,
-        quantity: 1,
-      });
-      
-      router.push('/Cart');
-    }
+    addToCart({
+      id: product.id,
+      name: product.title,
+      price: Number(product.price), // Convert string to number
+      image: product.image,
+      quantity: 1, // Default quantity
+    });
+    
+    router.push('/Cart');
   };
-
-  if (!product) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <div className="bg-white min-h-screen">
@@ -113,4 +86,3 @@ export default function ProductPage({ params }: PageProps) {
     </div>
   );
 }
-
